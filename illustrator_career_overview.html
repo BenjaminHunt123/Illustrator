@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustrator | Career Overview & Creative Hub</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- QRCode.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        studio: {
+                            950: '#0f1117',
+                            900: '#171a23',
+                            850: '#1c202c',
+                            800: '#222736',
+                            700: '#2d3448',
+                            orange: '#f97316',
+                            amber: '#fbbf24',
+                            indigo: '#6366f1',
+                            rose: '#f43f5e',
+                            emerald: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f1117;
+            color: #f3f4f6;
+            background-image: 
+                radial-gradient(circle at 12% 18%, rgba(249, 115, 22, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 88% 82%, rgba(99, 102, 241, 0.09) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.04) 0%, transparent 50%),
+                linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+        }
+        .glass-card {
+            background: rgba(23, 26, 35, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(249, 115, 22, 0.35);
+            box-shadow: 0 12px 32px -10px rgba(249, 115, 22, 0.15);
+        }
+        .orange-gradient-text {
+            background: linear-gradient(135deg, #f97316 0%, #fbbf24 50%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-orange {
+            box-shadow: 0 0 25px -5px rgba(249, 115, 22, 0.25);
+        }
+        /* Custom Checkbox & Range Controls */
+        input[type=range] {
+            -webkit-appearance: none;
+            background: #222736;
+            border-radius: 8px;
+            height: 8px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #f97316;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(249, 115, 22, 0.8);
+            transition: transform 0.15s ease;
+        }
+        input[type=range]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f1117;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #222736;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f97316;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-studio-orange selection:text-studio-950">
+
+    <header class="sticky top-0 z-40 w-full glass-card border-b border-studio-800 bg-studio-950/90 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo Brand -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-studio-orange via-studio-amber to-studio-indigo flex items-center justify-center text-studio-950 shadow-lg shadow-studio-orange/20 group-hover:scale-105 transition-transform duration-300">
+                        <i class="fa-solid fa-paintbrush text-lg font-bold"></i>
+                    </div>
+                    <span class="font-display font-bold text-xl sm:text-2xl tracking-tight text-white group-hover:text-studio-orange transition-colors">
+                        Studio <span class="text-studio-orange font-mono text-lg">&lt;Illustrator&gt;</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-6 text-xs sm:text-sm font-medium text-slate-300">
+                    <a href="#overview" class="hover:text-studio-orange transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-palette text-xs text-studio-orange"></i> Overview
+                    </a>
+                    <a href="#skills" class="hover:text-studio-orange transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-pen-ruler text-xs text-studio-amber"></i> Skills & Suite
+                    </a>
+                    <a href="#duties" class="hover:text-studio-orange transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-layer-group text-xs text-studio-indigo"></i> Production Pipeline
+                    </a>
+                    <a href="#pay" class="hover:text-studio-orange transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-coins text-xs text-studio-emerald"></i> Pay Benchmarks
+                    </a>
+                    <a href="#calculator" class="hover:text-studio-orange transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-calculator text-xs text-studio-orange"></i> Cost Estimator
+                    </a>
+                </nav>
+
+                <!-- Actions / Share QR Button -->
+                <div class="flex items-center gap-3">
+                    <button id="qrOpenBtn" class="px-3.5 py-2 rounded-xl bg-studio-800 hover:bg-studio-700 text-slate-200 border border-studio-700 text-xs sm:text-sm font-medium flex items-center gap-2 transition-all hover:border-studio-orange/50 shadow-sm" title="Generate Shareable QR Code">
+                        <i class="fa-solid fa-qrcode text-studio-orange"></i>
+                        <span class="hidden sm:inline">QR Share</span>
+                    </button>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl text-slate-400 hover:text-white hover:bg-studio-800 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-studio-900 border-b border-studio-800 px-4 pt-2 pb-4 space-y-2 text-sm">
+            <a href="#overview" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-200 hover:bg-studio-800 hover:text-studio-orange">
+                <i class="fa-solid fa-palette mr-2 text-studio-orange"></i> Overview
+            </a>
+            <a href="#skills" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-200 hover:bg-studio-800 hover:text-studio-orange">
+                <i class="fa-solid fa-pen-ruler mr-2 text-studio-amber"></i> Skills & Suite
+            </a>
+            <a href="#duties" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-200 hover:bg-studio-800 hover:text-studio-orange">
+                <i class="fa-solid fa-layer-group mr-2 text-studio-indigo"></i> Production Pipeline
+            </a>
+            <a href="#pay" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-200 hover:bg-studio-800 hover:text-studio-orange">
+                <i class="fa-solid fa-coins mr-2 text-studio-emerald"></i> Pay Benchmarks
+            </a>
+            <a href="#calculator" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-200 hover:bg-studio-800 hover:text-studio-orange">
+                <i class="fa-solid fa-calculator mr-2 text-studio-orange"></i> Cost Estimator
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="overview" class="relative pt-12 pb-20 overflow-hidden">
+            <!-- Glow Background Highlights -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-studio-orange/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/3 right-10 w-80 h-80 bg-studio-indigo/12 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <!-- Status Badges -->
+                    <div class="flex flex-wrap justify-center gap-2 mb-6">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-studio-emerald/10 border border-studio-emerald/30 text-xs font-mono text-studio-emerald">
+                            <span class="flex h-2 w-2 rounded-full bg-studio-emerald animate-pulse"></span>
+                            Available for Commissions
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-studio-orange/10 border border-studio-orange/30 text-xs font-mono text-studio-orange">
+                            <i class="fa-solid fa-book-open text-[10px]"></i> Editorial & Publishing
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-studio-indigo/10 border border-studio-indigo/30 text-xs font-mono text-studio-indigo">
+                            <i class="fa-solid fa-copyright text-[10px]"></i> Commercial Licensing
+                        </span>
+                    </div>
+
+                    <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                        Visual <span class="orange-gradient-text">Illustrator</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-xl font-light leading-relaxed mb-8">
+                        Digital & Editorial Illustrator, Character Designer & Visual Storyteller. Crafting expressive artwork, book covers, brand campaign visuals, and concept designs across print and digital media.
+                    </p>
+
+                    <!-- Key Expertise Tags -->
+                    <div class="flex flex-wrap justify-center gap-2.5 text-xs sm:text-sm mb-10 font-mono">
+                        <span class="px-3.5 py-2 rounded-xl glass-card text-slate-200 flex items-center gap-2 border-studio-800">
+                            <i class="fa-solid fa-wand-magic-sparkles text-studio-orange"></i> Character Design
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl glass-card text-slate-200 flex items-center gap-2 border-studio-800">
+                            <i class="fa-solid fa-newspaper text-studio-amber"></i> Editorial Artwork
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl glass-card text-slate-200 flex items-center gap-2 border-studio-800">
+                            <i class="fa-solid fa-book-cover text-studio-indigo"></i> Book Jackets & Covers
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl glass-card text-slate-200 flex items-center gap-2 border-studio-800">
+                            <i class="fa-solid fa-bezier-curve text-studio-emerald"></i> Vector & Key Art
+                        </span>
+                    </div>
+
+                    <!-- Call to Action Buttons -->
+                    <div class="flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-semibold">
+                        <a href="#skills" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-studio-orange via-studio-amber to-studio-indigo text-studio-950 font-bold hover:brightness-110 transition-all shadow-lg shadow-studio-orange/20 flex items-center gap-2">
+                            <i class="fa-solid fa-pen-ruler"></i> Explore Skills
+                        </a>
+                        <a href="#calculator" class="px-6 py-3.5 rounded-xl glass-card text-white hover:border-studio-orange transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-calculator text-studio-orange"></i> Estimate Project
+                        </a>
+                        <button onclick="document.getElementById('qrOpenBtn').click()" class="px-6 py-3.5 rounded-xl glass-card text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-qrcode text-studio-indigo"></i> Generate QR Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interactive Studio Status Bar -->
+                <div class="mt-14 glass-card rounded-2xl p-4 sm:p-6 glow-orange border-studio-orange/20 max-w-4xl mx-auto">
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs">
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1.5">
+                                <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                            </div>
+                            <span class="text-slate-400">~/canvas/editorial_cover_v4.psd</span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 text-slate-300">
+                            <span><i class="fa-solid fa-display text-studio-orange mr-1"></i> Canvas: 6000x8000px (300 DPI)</span>
+                            <span><i class="fa-solid fa-swatchbook text-studio-amber mr-1"></i> Profile: CMYK FOGRA39</span>
+                            <span class="text-studio-emerald"><i class="fa-solid fa-circle-check mr-1"></i> Ready for GitHub Pages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-16 bg-studio-900/60 border-t border-studio-800 relative">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-studio-orange font-mono font-semibold text-xs sm:text-sm uppercase tracking-wider">// Section 01</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-2">Skills & Studio Hardware Suite</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2">Core creative competencies, specialized digital software, hardware tablets, and industry qualifications.</p>
+                </div>
+
+                <!-- Core Skills Grid -->
+                <h3 class="text-lg font-display font-bold text-white mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-paintbrush text-studio-orange"></i> Core Illustration Competencies
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    
+                    <!-- Competency 1 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-studio-orange/10 border border-studio-orange/30 flex items-center justify-center text-studio-orange mb-5">
+                            <i class="fa-solid fa-palette text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">Digital Painting & Rendering</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Mastery of organic brush strokes, custom textures, lighting dynamics, and atmospheric depth in digital painting environments.
+                        </p>
+                        <span class="text-xs font-mono text-studio-orange bg-studio-950 px-2.5 py-1 rounded-md border border-studio-orange/30">Textures • Lighting • Brush Dynamics</span>
+                    </div>
+
+                    <!-- Competency 2 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-studio-amber/10 border border-studio-amber/30 flex items-center justify-center text-studio-amber mb-5">
+                            <i class="fa-solid fa-bezier-curve text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">Vector Art & Scalable Graphics</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Precision node editing, sharp iconography, scalable marketing key art, and flat-color vector spot artwork for web and print.
+                        </p>
+                        <span class="text-xs font-mono text-studio-amber bg-studio-950 px-2.5 py-1 rounded-md border border-studio-amber/30">SVG • Node Editing • Key Art</span>
+                    </div>
+
+                    <!-- Competency 3 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-studio-indigo/10 border border-studio-indigo/30 flex items-center justify-center text-studio-indigo mb-5">
+                            <i class="fa-solid fa-user-astronaut text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">Character Design & Model Sheets</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Developing distinctive character turnarounds, expression sheets, costume design, and gesture studies for games and animation.
+                        </p>
+                        <span class="text-xs font-mono text-studio-indigo bg-studio-950 px-2.5 py-1 rounded-md border border-studio-indigo/30">Turnarounds • Expressions • Gestures</span>
+                    </div>
+
+                    <!-- Competency 4 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-studio-emerald/10 border border-studio-emerald/30 flex items-center justify-center text-studio-emerald mb-5">
+                            <i class="fa-solid fa-border-all text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">Storyboarding & Layout</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Establishing focal points, rule of thirds compositions, visual storytelling beats, and thumbnail sequences for book pages and films.
+                        </p>
+                        <span class="text-xs font-mono text-studio-emerald bg-studio-950 px-2.5 py-1 rounded-md border border-studio-emerald/30">Thumbnails • Focal Points • Storybeats</span>
+                    </div>
+
+                    <!-- Competency 5 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-studio-rose/10 border border-studio-rose/30 flex items-center justify-center text-studio-rose mb-5">
+                            <i class="fa-solid fa-pen-nib text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">Linework & Inking Technique</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Clean line weight variation, hatch shading, comic-style inking, and crisp vector outlines tailored for high-resolution output.
+                        </p>
+                        <span class="text-xs font-mono text-studio-rose bg-studio-950 px-2.5 py-1 rounded-md border border-studio-rose/30">Line Weight • Inking • Crosshatching</span>
+                    </div>
+
+                    <!-- Competency 6 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5">
+                            <i class="fa-solid fa-print text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">Print Prepress & CMYK Profiling</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Managing bleed setups, spot color separations (Pantone), RGB to CMYK color space conversion, and proofing for physical publishing.
+                        </p>
+                        <span class="text-xs font-mono text-purple-300 bg-studio-950 px-2.5 py-1 rounded-md border border-purple-500/30">CMYK • Bleed • Pantone Spot</span>
+                    </div>
+
+                </div>
+
+                <!-- Software & Hardware Suite + Credentials -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <!-- Software & Hardware Suite -->
+                    <div class="glass-card rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-xl font-display font-bold text-white mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-laptop text-studio-amber"></i> Software & Hardware Workstation
+                        </h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mb-6">Digital illustration suites, 3D blocking tools, and pen display tablets.</p>
+
+                        <div class="space-y-3 font-mono text-xs">
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-studio-950 border border-studio-800">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-blue-950 text-blue-400 flex items-center justify-center font-bold">Ps</div>
+                                    <div>
+                                        <h5 class="font-semibold text-white font-sans text-sm">Adobe Photoshop</h5>
+                                        <p class="text-slate-400 text-[11px] font-sans">Primary digital painting, textures, color grading & brush setups</p>
+                                    </div>
+                                </div>
+                                <span class="text-studio-orange">Master</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-studio-950 border border-studio-800">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-amber-950 text-studio-amber flex items-center justify-center font-bold">Ai</div>
+                                    <div>
+                                        <h5 class="font-semibold text-white font-sans text-sm">Adobe Illustrator</h5>
+                                        <p class="text-slate-400 text-[11px] font-sans">Vector key art, logo illustration & scalable brand graphics</p>
+                                    </div>
+                                </div>
+                                <span class="text-studio-amber">Expert</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-studio-950 border border-studio-800">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-indigo-950 text-studio-indigo flex items-center justify-center font-bold">Pro</div>
+                                    <div>
+                                        <h5 class="font-semibold text-white font-sans text-sm">Procreate (iPad Pro)</h5>
+                                        <p class="text-slate-400 text-[11px] font-sans">Mobile sketching, initial concept thumbnails & gesture drawing</p>
+                                    </div>
+                                </div>
+                                <span class="text-studio-indigo">Master</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-studio-950 border border-studio-800">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 flex items-center justify-center font-bold">CSP</div>
+                                    <div>
+                                        <h5 class="font-semibold text-white font-sans text-sm">Clip Studio Paint / Blender</h5>
+                                        <p class="text-slate-400 text-[11px] font-sans">Manga/comic inking & 3D scene mannequin perspective blocking</p>
+                                    </div>
+                                </div>
+                                <span class="text-emerald-400">Proficient</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-studio-950 border border-studio-800">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-purple-950 text-purple-400 flex items-center justify-center font-bold">Wac</div>
+                                    <div>
+                                        <h5 class="font-semibold text-white font-sans text-sm">Wacom Cintiq Pro 24 / Apple Pencil</h5>
+                                        <p class="text-slate-400 text-[11px] font-sans">8192 pressure sensitivity levels with tilt support</p>
+                                    </div>
+                                </div>
+                                <span class="text-purple-300">Hardware</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Qualifications & Industry Credentials -->
+                    <div class="glass-card rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-xl font-display font-bold text-white mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-certificate text-studio-indigo"></i> Credentials & Professional Badges
+                        </h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mb-6">Formal degrees, professional union memberships, and licensing certifications.</p>
+
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-xl bg-studio-950 border border-studio-800">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h5 class="font-semibold text-white text-sm">BA (Hons) in Illustration</h5>
+                                        <p class="text-xs text-slate-400">UK Higher Education Degree</p>
+                                        <p class="text-xs text-slate-500 mt-1">First-class honors degree specializing in visual communication, editorial design, and sequential art.</p>
+                                    </div>
+                                    <span class="text-xs font-mono font-semibold px-2 py-1 bg-studio-orange/10 text-studio-orange rounded border border-studio-orange/30">BA Hons</span>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-studio-950 border border-studio-800">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h5 class="font-semibold text-white text-sm">Association of Illustrators (AOI) Registered</h5>
+                                        <p class="text-xs text-slate-400">UK Industry Guild Body</p>
+                                        <p class="text-xs text-slate-500 mt-1">Verified member adhering to ethical commissioning standards, copyright protection, and fair licensing practices.</p>
+                                    </div>
+                                    <span class="text-xs font-mono font-semibold px-2 py-1 bg-studio-amber/10 text-studio-amber rounded border border-studio-amber/30">AOI Member</span>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-studio-950 border border-studio-800">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h5 class="font-semibold text-white text-sm">Certified Commercial Licensing Specialist</h5>
+                                        <p class="text-xs text-slate-400">Intellectual Property & Royalties</p>
+                                        <p class="text-xs text-slate-500 mt-1">Expertise in structuring regional vs global usage rights, buyouts, and merchandise royalty contracts.</p>
+                                    </div>
+                                    <span class="text-xs font-mono font-semibold px-2 py-1 bg-studio-indigo/10 text-studio-indigo rounded border border-studio-indigo/30">IP Licensing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="duties" class="py-16 relative">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-studio-indigo font-mono font-semibold text-xs sm:text-sm uppercase tracking-wider">// Section 02</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-2">Production Workflow Pipeline</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2">The structured 6-stage lifecycle for editorial commissions, book covers, and commercial key art.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Step 1 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-studio-orange/20 text-studio-orange font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                01
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">Client Brief & Visual Discovery</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Reviewing project objectives, audience demographics, aspect ratios, color palettes, reference moodboards, and usage license scopes.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-studio-800 text-xs font-mono text-studio-orange flex items-center gap-2">
+                            <i class="fa-solid fa-clipboard-list"></i> Moodboard & Scope Brief
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-studio-amber/20 text-studio-amber font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                02
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">Thumbnailing & Composition</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Generating 3 to 5 rapid, low-resolution rough thumbnail sketches exploring composition, perspective, focal points, and silhouette readability.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-studio-800 text-xs font-mono text-studio-amber flex items-center gap-2">
+                            <i class="fa-solid fa-border-none"></i> 3-5 Rough Sketch Options
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-studio-indigo/20 text-studio-indigo font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                03
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">Line Art & Color Rough Approval</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Cleaning vector line art or pencil pass and applying a flat color key preview to establish mood, lighting direction, and client approval.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-studio-800 text-xs font-mono text-studio-indigo flex items-center gap-2">
+                            <i class="fa-solid fa-swatchbook"></i> Clean Lines & Color Key
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-studio-emerald/20 text-studio-emerald font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                04
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">High-Detail Painting & Texturing</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Rendering full textures, highlights, ambient occlusion, depth blur, custom brushwork, and intricate background elements.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-studio-800 text-xs font-mono text-studio-emerald flex items-center gap-2">
+                            <i class="fa-solid fa-paintbrush"></i> Rendering & Textures Pass
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-studio-rose/20 text-studio-rose font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                05
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">Color Grading & CMYK/RGB Export</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Fine-tuning adjustment layers, contrast levels, sharpening, and exporting high-res CMYK (TIF/PDF) for print and sRGB (PNG) for web.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-studio-800 text-xs font-mono text-studio-rose flex items-center gap-2">
+                            <i class="fa-solid fa-sliders"></i> CMYK Print & RGB Export
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                06
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">Client Licensing & Asset Delivery</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Delivering layered PSD/AI master files, final license agreement paperwork, invoice release, and archiving master assets.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-studio-800 text-xs font-mono text-purple-400 flex items-center gap-2">
+                            <i class="fa-solid fa-box-archive"></i> Master Files & Licensing
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="pay" class="py-16 bg-studio-900/60 border-t border-studio-800 relative">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-studio-emerald font-mono font-semibold text-xs sm:text-sm uppercase tracking-wider">// Section 03</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-2">Average Pay & Revenue Benchmarks</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2">UK salary benchmarks for in-house staff illustrators, freelance commercial day rates, and sector revenue breakdowns.</p>
+                </div>
+
+                <!-- Pay Tiers Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    
+                    <!-- Tier 1 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-mono font-semibold text-studio-orange uppercase tracking-wide">Junior Illustrator</span>
+                            <h3 class="font-display text-2xl font-extrabold text-white mt-2 mb-1">£21k – £27k</h3>
+                            <p class="text-slate-400 text-xs mb-4">Annual Base Salary (UK)</p>
+                            <p class="text-slate-300 text-xs leading-relaxed border-t border-studio-800 pt-3">
+                                Entry-level studio artist handling vector asset generation, basic editorial spot art, and image prepping.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 text-[11px] font-mono text-slate-400">
+                            Freelance: ~£180 – £230 / day
+                        </div>
+                    </div>
+
+                    <!-- Tier 2 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-studio-orange/40">
+                        <div>
+                            <span class="text-xs font-mono font-semibold text-studio-amber uppercase tracking-wide">Mid-Level Illustrator</span>
+                            <h3 class="font-display text-2xl font-extrabold text-white mt-2 mb-1">£27k – £38k</h3>
+                            <p class="text-slate-400 text-xs mb-4">Annual Base Salary (UK)</p>
+                            <p class="text-slate-300 text-xs leading-relaxed border-t border-studio-800 pt-3">
+                                Experienced artist leading book cover art, game concept assets, and high-profile magazine editorial spreads.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 text-[11px] font-mono text-slate-400">
+                            Freelance: ~£250 – £350 / day
+                        </div>
+                    </div>
+
+                    <!-- Tier 3 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-mono font-semibold text-studio-indigo uppercase tracking-wide">Senior / Lead Illustrator</span>
+                            <h3 class="font-display text-2xl font-extrabold text-white mt-2 mb-1">£38k – £55k+</h3>
+                            <p class="text-slate-400 text-xs mb-4">Annual Base Salary (UK)</p>
+                            <p class="text-slate-300 text-xs leading-relaxed border-t border-studio-800 pt-3">
+                                Art lead directing agency visual campaigns, main publishing titles, and major commercial branding visual identities.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 text-[11px] font-mono text-slate-400">
+                            Freelance: ~£380 – £500+ / day
+                        </div>
+                    </div>
+
+                    <!-- Tier 4 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-mono font-semibold text-studio-emerald uppercase tracking-wide">Commercial Campaign Lead</span>
+                            <h3 class="font-display text-2xl font-extrabold text-white mt-2 mb-1">£60k – £120k+</h3>
+                            <p class="text-slate-400 text-xs mb-4">Global Campaign & Royalty Income</p>
+                            <p class="text-slate-300 text-xs leading-relaxed border-t border-studio-800 pt-3">
+                                Top-tier illustrator handling international advertising campaigns, exclusive global buyouts, and merchandise royalties.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 text-[11px] font-mono text-slate-400">
+                            Campaign Fee: £2.5k – £15k+ / piece
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sector Income Revenue Breakdown -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
+                    <h3 class="font-display font-bold text-white text-base sm:text-lg mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie text-studio-orange"></i> Revenue Stream Sector Breakdown
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div class="p-4 rounded-xl bg-studio-950 border border-studio-800">
+                            <span class="text-2xl font-black text-studio-orange block font-mono">35%</span>
+                            <span class="text-xs text-slate-300 font-semibold block mt-1">Editorial & Publishing</span>
+                            <span class="text-[10px] text-slate-500">Magazines, News & Online Media</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-studio-950 border border-studio-800">
+                            <span class="text-2xl font-black text-studio-amber block font-mono">30%</span>
+                            <span class="text-xs text-slate-300 font-semibold block mt-1">Advertising & Commercial</span>
+                            <span class="text-[10px] text-slate-500">Brand Key Art & Packaging</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-studio-950 border border-studio-800">
+                            <span class="text-2xl font-black text-studio-indigo block font-mono">20%</span>
+                            <span class="text-xs text-slate-300 font-semibold block mt-1">Book Covers & Novels</span>
+                            <span class="text-[10px] text-slate-500">Fiction, YA & Children’s Books</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-studio-950 border border-studio-800">
+                            <span class="text-2xl font-black text-studio-emerald block font-mono">15%</span>
+                            <span class="text-xs text-slate-300 font-semibold block mt-1">Prints & Licensing</span>
+                            <span class="text-[10px] text-slate-500">Direct Shop & Royalty Merch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator" class="py-16 relative">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-studio-orange font-mono font-semibold text-xs sm:text-sm uppercase tracking-wider">// Section 04</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-2">Illustration Commission Cost & Time Estimator</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2">Select project scope, finish style, usage licensing rights, and rush option to calculate studio hours, production timeline, and total fee quotes.</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border-studio-orange/30 max-w-4xl mx-auto glow-orange">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        
+                        <!-- Inputs -->
+                        <div class="lg:col-span-7 space-y-6">
+                            
+                            <!-- Project Scope -->
+                            <div>
+                                <label class="text-xs font-semibold text-slate-200 mb-2 block flex items-center justify-between">
+                                    <span><i class="fa-solid fa-paintbrush text-studio-orange mr-1.5"></i> Project Scope & Deliverable</span>
+                                </label>
+                                <select id="scopeSelect" class="w-full bg-studio-950 border border-studio-800 text-white text-xs sm:text-sm rounded-xl p-3 focus:border-studio-orange focus:outline-none font-mono">
+                                    <option value="120" data-hours="6" data-name="Spot Illustration (Small Web/Print Icon)" selected>Spot Illustration (Small Web or Magazine Icon)</option>
+                                    <option value="320" data-hours="14" data-name="Full Page Editorial Illustration">Full Page Editorial / Article Illustration</option>
+                                    <option value="650" data-hours="28" data-name="Book Cover & Full Dust Jacket Layout">Book Cover & Full Dust Jacket Art</option>
+                                    <option value="480" data-hours="20" data-name="Character Concept Turnaround Sheet">Character Concept & Model Turnaround Sheet</option>
+                                    <option value="950" data-hours="42" data-name="Commercial Advertising Poster Campaign">Commercial Advertising Poster Campaign</option>
+                                </select>
+                            </div>
+
+                            <!-- Finish & Art Style -->
+                            <div>
+                                <label class="text-xs font-semibold text-slate-200 mb-2 block flex items-center gap-1.5">
+                                    <i class="fa-solid fa-wand-magic-sparkles text-studio-amber"></i> Render Finish & Art Style
+                                </label>
+                                <select id="styleSelect" class="w-full bg-studio-950 border border-studio-800 text-white text-xs sm:text-sm rounded-xl p-3 focus:border-studio-orange focus:outline-none font-mono">
+                                    <option value="0.75" data-name="Sketched Line Art & Monochrome Ink">Sketched Line Art & Monochrome Inking (Fast)</option>
+                                    <option value="1.0" data-name="Flat Color Vectors & Clean Inks" selected>Flat Color Vectors & Clean Linework (Standard)</option>
+                                    <option value="1.45" data-name="Full Painterly, Lighting Effects & High Textures">Full Painterly Render, Lighting Effects & Detailed Textures</option>
+                                </select>
+                            </div>
+
+                            <!-- Commercial Usage Rights -->
+                            <div>
+                                <label class="text-xs font-semibold text-slate-200 mb-2 block flex items-center gap-1.5">
+                                    <i class="fa-solid fa-copyright text-studio-indigo"></i> Usage Rights & Commercial License
+                                </label>
+                                <select id="licenseSelect" class="w-full bg-studio-950 border border-studio-800 text-white text-xs sm:text-sm rounded-xl p-3 focus:border-studio-orange focus:outline-none font-mono">
+                                    <option value="1.0" data-name="Personal / Non-Profit / Editorial Use" selected>Personal / Non-Profit / Editorial Article Use (1.0x)</option>
+                                    <option value="1.4" data-name="Standard Commercial License (Regional)">Standard Commercial License - Regional / Small Business (1.4x)</option>
+                                    <option value="2.1" data-name="Exclusive Global Commercial Rights / Buyout">Exclusive Global Commercial Rights & Buyout (2.1x)</option>
+                                </select>
+                            </div>
+
+                            <!-- Rush Delivery Toggle -->
+                            <div class="p-4 rounded-xl bg-studio-950 border border-studio-800 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-lg bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400">
+                                        <i class="fa-solid fa-bolt"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-xs font-semibold text-white">Priority Rush Delivery</h5>
+                                        <p class="text-[11px] text-slate-400">Halves timeline (+40% surge fee)</p>
+                                    </div>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" id="rushToggle" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-studio-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-studio-orange"></div>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <!-- Quote Output Display -->
+                        <div class="lg:col-span-5 bg-studio-950 rounded-2xl p-6 border border-studio-800 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between pb-4 border-b border-studio-800">
+                                    <span class="text-xs font-mono font-semibold text-studio-orange uppercase tracking-wider">Commission Summary</span>
+                                    <i class="fa-solid fa-palette text-slate-500"></i>
+                                </div>
+
+                                <div class="mt-6 space-y-5">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <span class="text-slate-400 text-xs block">Studio Hours</span>
+                                            <span id="outHours" class="font-display text-lg font-bold text-white font-mono">14 Hours</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-slate-400 text-xs block">Included Revisions</span>
+                                            <span id="outRevisions" class="font-display text-lg font-bold text-studio-amber font-mono">2 Rounds</span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <span class="text-slate-400 text-xs block">Production Timeline</span>
+                                        <span id="outTimeline" class="font-display text-2xl font-bold text-studio-indigo mt-1 block font-mono">1.2 Weeks</span>
+                                    </div>
+
+                                    <div>
+                                        <span class="text-slate-400 text-xs block">Estimated Fee Quote (GBP)</span>
+                                        <span id="outCost" class="font-display text-4xl font-extrabold text-studio-orange mt-1 block font-mono">£320</span>
+                                    </div>
+
+                                    <div class="p-3.5 rounded-xl bg-studio-900 border border-studio-800 text-xs text-slate-400 leading-relaxed space-y-1 font-sans">
+                                        <p><i class="fa-solid fa-check text-studio-emerald mr-1.5"></i> High-res CMYK Print PDF + RGB PNG</p>
+                                        <p><i class="fa-solid fa-check text-studio-emerald mr-1.5"></i> Layered Master PSD / Vector File</p>
+                                        <p><i class="fa-solid fa-check text-studio-emerald mr-1.5"></i> Signed Licensing Contract Included</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button id="copyEstimateBtn" class="w-full mt-6 py-3.5 rounded-xl bg-gradient-to-r from-studio-orange via-studio-amber to-studio-indigo hover:brightness-110 text-studio-950 text-xs font-bold transition-all shadow-lg shadow-studio-orange/20 flex items-center justify-center gap-2 font-sans">
+                                <i class="fa-solid fa-copy"></i> Copy Estimate Summary
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-studio-950 border-t border-studio-800 py-8 text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-3 font-mono">
+            <p class="font-medium text-slate-400">Illustrator Career Profile & Digital Artwork Hub</p>
+            <p>Optimized for <span class="text-studio-orange">GitHub Pages</span> hosting & mobile QR code sharing.</p>
+            <p class="pt-2 text-slate-600">&copy; <span id="yearSpan"></span> Illustrator Showcase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- QR Code Generator Modal -->
+    <div id="qrModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="glass-card bg-studio-900 border-studio-orange/40 rounded-2xl max-w-md w-full p-6 text-center relative shadow-2xl">
+            <button id="qrCloseBtn" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="w-12 h-12 rounded-full bg-studio-orange/20 text-studio-orange flex items-center justify-center mx-auto mb-3">
+                <i class="fa-solid fa-qrcode text-xl"></i>
+            </div>
+
+            <h3 class="font-display text-xl font-bold text-white mb-1">GitHub Pages QR Generator</h3>
+            <p class="text-slate-400 text-xs mb-5">Enter your hosted GitHub Pages link to generate a mobile-scannable QR code for instant viewing.</p>
+
+            <!-- URL Input Field -->
+            <div class="mb-4 text-left font-mono">
+                <label for="qrUrlInput" class="text-xs font-semibold text-slate-300 mb-1 block">Hosted GitHub Pages Link</label>
+                <input type="url" id="qrUrlInput" class="w-full bg-studio-950 border border-studio-800 text-white text-xs rounded-xl p-3 focus:border-studio-orange focus:outline-none" placeholder="https://username.github.io/illustrator-portfolio/">
+            </div>
+
+            <!-- QR Code Canvas Render Box -->
+            <div class="bg-white p-4 rounded-2xl inline-block shadow-inner mb-4">
+                <div id="qrcode"></div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <button id="copyUrlBtn" class="flex-1 py-2.5 rounded-xl bg-studio-800 hover:bg-studio-700 text-slate-200 text-xs font-semibold border border-studio-700 transition-colors flex items-center justify-center gap-1.5 font-mono">
+                    <i class="fa-solid fa-copy"></i> Copy Link
+                </button>
+                <button id="downloadQrBtn" class="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-studio-orange to-studio-indigo text-studio-950 text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow-md font-mono">
+                    <i class="fa-solid fa-download"></i> Download PNG
+                </button>
+            </div>
+
+            <!-- GitHub Pages Instructions -->
+            <div class="mt-4 p-3 rounded-xl bg-studio-950 border border-studio-800 text-[11px] text-slate-400 text-left space-y-1 font-mono">
+                <p class="text-studio-orange font-semibold">GitHub Pages Instructions:</p>
+                <p>1. Name this HTML file <code class="text-white">index.html</code> in your repository root.</p>
+                <p>2. Enable Pages in <code class="text-white">Settings -&gt; Pages -&gt; Branch: main</code>.</p>
+                <p>3. Paste your published URL above to download your custom QR code.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Popup -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 bg-studio-orange text-studio-950 px-4 py-2.5 rounded-xl shadow-lg text-xs font-bold flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 font-mono">
+        <i class="fa-solid fa-circle-check"></i> <span id="toastMsg">Action completed successfully!</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set dynamic current year
+            document.getElementById('yearSpan').textContent = new Date().getFullYear();
+
+            // Mobile Navigation Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // QR Code Generator Modal Logic
+            const qrModal = document.getElementById('qrModal');
+            const qrOpenBtn = document.getElementById('qrOpenBtn');
+            const qrCloseBtn = document.getElementById('qrCloseBtn');
+            const qrUrlInput = document.getElementById('qrUrlInput');
+            const qrcodeContainer = document.getElementById('qrcode');
+            const downloadQrBtn = document.getElementById('downloadQrBtn');
+
+            function generateQRCode(url) {
+                if (!url) url = window.location.href;
+                qrcodeContainer.innerHTML = '';
+                
+                new QRCode(qrcodeContainer, {
+                    text: url,
+                    width: 170,
+                    height: 170,
+                    colorDark: "#0f1117",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            }
+
+            function openQRModal() {
+                const currentUrl = window.location.href;
+                qrUrlInput.value = currentUrl;
+                generateQRCode(currentUrl);
+                qrModal.classList.remove('hidden');
+            }
+
+            function closeQRModal() {
+                qrModal.classList.add('hidden');
+            }
+
+            qrOpenBtn.addEventListener('click', openQRModal);
+            qrCloseBtn.addEventListener('click', closeQRModal);
+            qrModal.addEventListener('click', (e) => {
+                if (e.target === qrModal) closeQRModal();
+            });
+
+            qrUrlInput.addEventListener('input', (e) => {
+                const val = e.target.value.trim();
+                generateQRCode(val || window.location.href);
+            });
+
+            // Copy Link Button
+            document.getElementById('copyUrlBtn').addEventListener('click', () => {
+                const textToCopy = qrUrlInput.value || window.location.href;
+                copyToClipboard(textToCopy);
+                showToast('GitHub Pages Link copied to clipboard!');
+            });
+
+            // Download QR Code PNG
+            downloadQrBtn.addEventListener('click', () => {
+                const img = qrcodeContainer.querySelector('img');
+                const canvas = qrcodeContainer.querySelector('canvas');
+                let imageSrc = '';
+
+                if (img && img.src) {
+                    imageSrc = img.src;
+                } else if (canvas) {
+                    imageSrc = canvas.toDataURL("image/png");
+                }
+
+                if (imageSrc) {
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = imageSrc;
+                    downloadLink.download = 'illustrator-portfolio-qr.png';
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                    showToast('QR Code PNG downloaded!');
+                } else {
+                    showToast('Unable to export QR code image.');
+                }
+            });
+
+            // Illustration Commission Estimator Calculator Logic
+            const scopeSelect = document.getElementById('scopeSelect');
+            const styleSelect = document.getElementById('styleSelect');
+            const licenseSelect = document.getElementById('licenseSelect');
+            const rushToggle = document.getElementById('rushToggle');
+
+            const outHours = document.getElementById('outHours');
+            const outRevisions = document.getElementById('outRevisions');
+            const outTimeline = document.getElementById('outTimeline');
+            const outCost = document.getElementById('outCost');
+            const copyEstimateBtn = document.getElementById('copyEstimateBtn');
+
+            function calculateEstimates() {
+                const baseCost = parseFloat(scopeSelect.value);
+                const baseHours = parseFloat(scopeSelect.options[scopeSelect.selectedIndex].getAttribute('data-hours'));
+                
+                const styleMult = parseFloat(styleSelect.value);
+                const licenseMult = parseFloat(licenseSelect.value);
+                const isRush = rushToggle.checked;
+
+                const rushMult = isRush ? 1.4 : 1.0;
+                const speedFactor = isRush ? 0.5 : 1.0;
+
+                // Calculated Output Values
+                const totalHours = Math.round(baseHours * styleMult);
+                
+                // Days/Weeks assuming 5 active studio hours/day
+                const studioDays = (totalHours / 5) * speedFactor;
+                const studioWeeks = (studioDays / 5).toFixed(1);
+
+                let totalCost = Math.round(baseCost * styleMult * licenseMult * rushMult);
+                if (totalCost < 100) totalCost = 100;
+
+                outHours.textContent = `${totalHours} Hours`;
+                outRevisions.textContent = styleMult > 1.2 ? "3 Rounds" : "2 Rounds";
+                outTimeline.textContent = studioWeeks < 0.8 ? `${Math.ceil(studioDays)} Days` : `${studioWeeks} Weeks`;
+                outCost.textContent = `£${totalCost.toLocaleString('en-GB')}`;
+            }
+
+            scopeSelect.addEventListener('change', calculateEstimates);
+            styleSelect.addEventListener('change', calculateEstimates);
+            licenseSelect.addEventListener('change', calculateEstimates);
+            rushToggle.addEventListener('change', calculateEstimates);
+
+            // Initial calculation
+            calculateEstimates();
+
+            // Copy Estimate Summary
+            copyEstimateBtn.addEventListener('click', () => {
+                const scopeName = scopeSelect.options[scopeSelect.selectedIndex].getAttribute('data-name');
+                const styleName = styleSelect.options[styleSelect.selectedIndex].getAttribute('data-name');
+                const licenseName = licenseSelect.options[licenseSelect.selectedIndex].getAttribute('data-name');
+                const rushStatus = rushToggle.checked ? "Yes (Priority +40%)" : "No (Standard Timeline)";
+
+                const summaryText = `Illustration Commission Estimate:\n\nScope: ${scopeName}\nRender Style: ${styleName}\nUsage License: ${licenseName}\nRush Delivery: ${rushStatus}\n\nOutputs:\n- Studio Hours: ${outHours.textContent}\n- Included Revisions: ${outRevisions.textContent}\n- Estimated Timeline: ${outTimeline.textContent}\n- Total Fee Quote: ${outCost.textContent}`;
+
+                copyToClipboard(summaryText);
+                showToast('Estimate summary copied to clipboard!');
+            });
+
+            function copyToClipboard(text) {
+                const tempInput = document.createElement('textarea');
+                tempInput.value = text;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+            }
+
+            function showToast(msg) {
+                const toast = document.getElementById('toast');
+                const toastMsg = document.getElementById('toastMsg');
+                toastMsg.textContent = msg;
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 2500);
+            }
+        });
+    </script>
+</body>
+</html>
